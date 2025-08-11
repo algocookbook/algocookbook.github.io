@@ -1,0 +1,54 @@
+<!-- REPLACE THE FORM SECTION IN index.html WITH THIS -->
+
+<!-- Option 1: Formspree (replace YOUR_FORM_ID) -->
+<form id="early-access-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <div class="form-group">
+        <input type="email" 
+               name="email"
+               id="email" 
+               placeholder="trader@example.com" 
+               required>
+        <button type="submit">Get Early Access</button>
+    </div>
+</form>
+
+<!-- Option 2: Simple JavaScript (stores nowhere but shows success) -->
+<form id="early-access-form" onsubmit="return handleSubmit(event)">
+    <div class="form-group">
+        <input type="email" 
+               id="email" 
+               placeholder="trader@example.com" 
+               required>
+        <button type="submit">Get Early Access</button>
+    </div>
+</form>
+
+<script>
+function handleSubmit(event) {
+    event.preventDefault();
+    const email = document.getElementById('email').value;
+    
+    // Just show success (doesn't actually save anywhere)
+    document.getElementById('success-message').style.display = 'block';
+    document.getElementById('early-access-form').style.display = 'none';
+    
+    // You could log it to console for now
+    console.log('Email submitted:', email);
+    
+    // Show a better message
+    document.getElementById('success-message').innerHTML = 
+        '✅ Thanks! We\'ll email you at <strong>' + email + '</strong> when the book launches.';
+    
+    return false;
+}
+</script>
+
+<!-- Option 3: Google Form (replace with your Google Form URL) -->
+<div style="text-align: center;">
+    <a href="https://forms.gle/YOUR_FORM_ID" 
+       target="_blank" 
+       class="button" 
+       style="display: inline-block; padding: 15px 30px; background: linear-gradient(45deg, #00ff88, #00ccff); color: #000; text-decoration: none; border-radius: 5px; font-weight: bold;">
+        Get Early Access (Opens Google Form)
+    </a>
+</div>

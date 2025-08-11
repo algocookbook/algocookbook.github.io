@@ -1,0 +1,38 @@
+==============================================
+📤 PUSH YOUR LANDING PAGE LIVE
+==============================================
+
+Your changes are committed and ready to push\!
+
+Run this command:
+-----------------
+cd /home/opc/algocookbook.github.io
+git push origin main
+
+When prompted:
+Username: TheAlgoCookbook
+Password: [Your GitHub Personal Access Token]
+
+To create a token:
+------------------
+1. Go to: https://github.com/settings/tokens/new
+2. Name: AlgoCookbook Deploy  
+3. Expiration: 90 days
+4. Select scope: ✅ repo (Full control)
+5. Click "Generate token"
+6. Copy the token (starts with ghp_)
+
+Alternative: Use GitHub CLI
+----------------------------
+gh auth login
+gh repo sync
+
+Your site will be live at:
+https://algocookbook.github.io
+
+Files ready to deploy:
+- index.html (landing page with countdown)
+- robots.txt (SEO)
+- sitemap.xml (SEO)
+- assets/avatar.png (social media)
+- assets/social-preview.png (social media)
