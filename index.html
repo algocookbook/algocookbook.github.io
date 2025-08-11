@@ -430,8 +430,8 @@ ELIF z_score < -2:
     </div>
     
     <script>
-        // Countdown timer
-        const launchDate = new Date(Date.now() + 35 * 24 * 60 * 60 * 1000); // 35 days from now
+        // Countdown timer - Fixed to September 15, 2025
+        const launchDate = new Date('2025-09-15T00:00:00-07:00'); // September 15, 2025 Pacific Time
         
         function updateCountdown() {
             const now = new Date();
@@ -445,6 +445,12 @@ ELIF z_score < -2:
                 document.getElementById('days').textContent = days;
                 document.getElementById('hours').textContent = hours;
                 document.getElementById('minutes').textContent = minutes;
+            } else {
+                // Launch day reached!
+                document.getElementById('days').textContent = '0';
+                document.getElementById('hours').textContent = '0';
+                document.getElementById('minutes').textContent = '0';
+                document.getElementById('countdown').innerHTML = '<h2 style="color: #00ff88;">🎉 NOW AVAILABLE!</h2>';
             }
         }
         
