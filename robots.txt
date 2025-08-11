@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://algocookbook.github.io/sitemap.xml
